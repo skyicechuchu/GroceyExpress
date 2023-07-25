@@ -1,0 +1,22 @@
+//logging in as admin
+1,1
+//make_store
+make_store,store3,0,storeMan3,100,200,1,Alice,Peng,600-900-8000
+//display_stores
+display_stores
+//logout
+logout
+//wrongLogin testing
+storeMan1,2
+//Login as manager
+storeMan1,1
+//Sell_item
+sell_item,store1,apple,5
+//Test same item error
+sell_item,store1,apple,5
+//test wrong store
+sell_item,store2,apple,5
+//test display_items
+display_items,store1
+sell_item,store1,dog,5
+display_items,store1

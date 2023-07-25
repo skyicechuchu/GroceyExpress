@@ -1,0 +1,122 @@
+> 1,1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is admin
+You are logged on to the Grocery Express Delivery Service as admin
+> make_store,koger,0,smnew1,311,1232,2,Abi,Brown,987-100-3001
+OK:change_completed
+> make_store,target,0,smnew2,111,12,2,Alice,Smith,987-100-3000
+OK:change_completed
+> display_stores
+Store name: koger, Manager name: Abi Brown, Revenue: 0
+Store name: target, Manager name: Alice Smith, Revenue: 0
+OK:display_completed
+> make_store,koger,0,smnewerror,311,1232,2,Abi,Brown,987-100-3001
+ERROR:store_identifier_already_exists
+> make_store,wholefood,0,smnew2,111,12,2,Alice,Smith,987-100-3000
+ERROR:manager_account_already_exists
+> logout
+Logging out
+back to login page
+Please enter your account and password separated by comma for login.To exit, please enter stop
+> 1,1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is admin
+You are logged on to the Grocery Express Delivery Service as admin
+sell_item,koger,pot_roast,1
+> sell_item,koger,pot_roast,1
+need storemanager access
+> smnew1,2
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is storemanager
+You are logged on to the Grocery Express Delivery Service as storemanager
+> sell_item,target,pot_roast,1
+does not have access to change this store
+> sell_item,koger,pot_roast,1
+OK:change_completed
+> sell_item,koger,pot_roast,2
+ERROR:item_identifier_already_exists
+> sell_item,koger,carrot,10
+OK:change_completed
+> smnew2,2
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is storemanager
+You are logged on to the Grocery Express Delivery Service as storemanager
+> sell_item,target,milk,4
+OK:change_completed
+> logout
+back to login page
+Please enter your account and password separated by comma for login.To exit, please enter stop
+> smnew1,2
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is storemanager
+You are logged on to the Grocery Express Delivery Service as storemanager
+> make_pilot,pnew1,Peter,Anderson,109-121-0211,ABL909,0
+need adminCurr access
+logout
+> logout
+Logging out
+back to login page
+Please enter your account and password separated by comma for login.To exit, please enter stop
+1,1
+> 1,1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is admin
+You are logged on to the Grocery Express Delivery Service as admin
+> make_pilot,pnew1,Peter,Anderson,109-121-0211,098-290-320,ABL909,0
+OK:change_completed
+> make_pilot,pnew2,Sam,Houk,119-121-0211,198-290-320,ABL903,10
+OK:change_completed
+make_pilot,pnew2,Sam1,Houk1,119-121-0211,198-290-320,ABL903,10
+> make_pilot,pnew2,Sam1,Houk1,119-121-0211,198-290-320,ABL903,10
+ERROR:pilot_identifier_already_exists
+> logout
+Logging out
+back to login page
+Please enter your account and password separated by comma for login.To exit, please enter stop
+> smnew1,2
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is storemanager
+You are logged on to the Grocery Express Delivery Service as storemanager
+> make_drone,target,1,10,5
+does not have access to change this store
+> make_drone,koger,1,10,5
+OK:change_completed
+> make_drone,koger,12,1,1
+OK:change_completed
+> fly_drone,target,12,pnew1
+does not have access to change this store
+> fly_drone,koger,199,pnew1
+ERROR:drone_identifier_does_not_exist
+> fly_drone,koger,1,pnew10
+ERROR:pilot_identifier_does_not_exist
+> fly_drone,koger,1,pnew1
+OK:change_completed
+logout
+> logout
+Logging out
+back to login page
+Please enter your account and password separated by comma for login.To exit, please enter stop
+> ct9,28
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is customer
+You are logged on to the Grocery Express Delivery Service as customer
+> start_order,abc,ct9
+ERROR:store_identifier_does_not_exists
+> start_order,koger,xx
+ERROR:customer_identifier_does_not_exist
+> start_order,koger,ct9
+OK:change_completed
+> request_item,koger,1,pot_roast,3,10
+OK:change_completed
+smnew1,2
+> smnew1,2
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is storemanager
+You are logged on to the Grocery Express Delivery Service as storemanager
+> display_orders,koger
+Order ID: 1, Store Name: koger, Drone ID: 1, Customer: team28 work28, Phone: 617-982-0027
+OK:display_completed
+> add_birds,10
+OK:change_completed
+OK:added_birds_completed
+

@@ -1,0 +1,95 @@
+> 1,1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is admin
+You are logged on to the Grocery Express Delivery Service as admin
+> make_store,store3,0,storeMan3,33,333,3,Abi,Brown,687-100-30007
+OK:change_completed
+> display_stores
+Store name: store3, Manager name: Team Brown, Revenue: 0
+OK:display_completed
+> make_customer,cus1,cus1,Ann,Boya,617-999-9900,3,100,10,38
+OK:change_completed
+> display_customers
+account:cus1, name:AnnBoya, phone:617-999-9900, rating:3, credit:100
+OK:display_completed
+> logout
+Logging out
+back to login page
+Please enter your account and password separated by comma for login.To exit, please enter stop
+> storeMan1,1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is storemanager
+You are logged on to the Grocery Express Delivery Service as storemanager
+> sell_item,store1,apple,5
+OK:change_completed
+> sell_item,store1,banana,6
+OK:change_completed
+> display_items,store1
+name:apple,weight:5
+name:banana,weight:6
+OK:display_completed
+> display_orders,store1
+OK:display_completed
+> logout
+Logging out
+back to login page
+Please enter your account and password separated by comma for login.To exit, please enter stop
+> 1,1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is admin
+You are logged on to the Grocery Express Delivery Service as admin
+> add_birds,8
+> make_pilot,noPilot,no,no,no,no,no,0
+OK:change_completed
+> display_pilots
+name:no_no,phone:no,taxID:no,licenseID:no,experience:0
+name:App_Ppap,phone:617-617-617,taxID:617-617-617,licenseID:license1,experience:0
+OK:display_completed
+> logout
+Logging out
+back to login page
+Please enter your account and password separated by comma for login.To exit, please enter stop
+> storeMan1,1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is storemanager
+You are logged on to the Grocery Express Delivery Service as storemanager
+> make_drone,store1,1,10,5
+OK:change_completed
+> make_drone,store1,2,100,100
+OK:change_completed
+> display_drones,store1
+storename:store1, drone id:1, capacity:10, number_orders:0, remaining_cap: 10, delivery_before_refuel:5
+storename:store1, drone id:2, capacity:100, number_orders:0, remaining_cap: 100, delivery_before_refuel:100
+OK:display_completed
+cus1,cus1
+> cus1,cus1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is customer
+You are logged on to the Grocery Express Delivery Service as customer
+> start_order,store1,cus1
+OK:Change Completed. A new order is created for you at store1. OrderID is 1
+OK:change_completed
+> start_order,store1,cus1
+OK:Change Completed. A new order is created for you at store1. OrderID is 2
+OK:change_completed
+> start_order,store1,cus1
+OK:Change Completed. A new order is created for you at store1. OrderID is 3
+OK:change_completed
+> request_item,store1,1,apple,1,1
+OK:change_completed
+> request_item,store1,1,banana,10000,10000
+ERROR:customer_cant_afford_new_item
+display_customer_order,cus1
+> display_customer_order,cus1
+Order ID: 1, Store Name: store1, Drone ID: 2, Customer: Ann Boya, Phone: 617-999-9900
+item_name:apple,total_quantity:1,total_cost:1,total_weight:5
+Order ID: 2, Store Name: store1, Drone ID: 2, Customer: Ann Boya, Phone: 617-999-9900
+Order ID: 3, Store Name: store1, Drone ID: 2, Customer: Ann Boya, Phone: 617-999-9900
+> request_item,store1,1,banana,1,1
+OK:change_completed
+> display_customer_order,cus1
+Order ID: 1, Store Name: store1, Drone ID: 2, Customer: Ann Boya, Phone: 617-999-9900
+item_name:apple,total_quantity:1,total_cost:1,total_weight:5
+item_name:banana,total_quantity:1,total_cost:1,total_weight:6
+Order ID: 2, Store Name: store1, Drone ID: 2, Customer: Ann Boya, Phone: 617-999-9900
+Order ID: 3, Store Name: store1, Drone ID: 2, Customer: Ann Boya, Phone: 617-999-9900

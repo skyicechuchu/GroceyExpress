@@ -1,0 +1,40 @@
+Welcome to the Grocery Express Delivery Service!
+Please enter your account and password separated by comma for login.To exit, please enter stop
+> //logging in as admin
+> 1,1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is admin
+You are logged on to the Grocery Express Delivery Service as admin
+> make_store,store1,0,storeMan1,100,200,1,Alice,Peng,600-900-8000
+OK:change_completed
+//display_stores
+> display_stores
+Store name: store1, Manager name: Alice Peng, Revenue: 0
+OK:display_completed
+//logout
+> logout
+Logging out
+back to login page
+Please enter your account and password separated by comma for login.To exit, please enter stop
+> //wrongLogin testing
+> storeMan1,2
+Invalid username/password combination.
+remaining attempts: 4
+> //Login as manager
+> storeMan1,1
+Login Successful. Redirecting to delivery service dashboard
+Your logging type is storemanager
+You are logged on to the Grocery Express Delivery Service as storemanager
+//Sell_item
+> sell_item,store1,apple,5
+OK:change_completed
+> sell_item,store1,apple,5
+ERROR:item_identifier_already_exists
+item_identifier_already_exists
+> //test wrong store
+> sell_item,store2,apple,5
+does not have access to change this store
+> //test display_items
+> display_items,store1
+name:apple,weight:5
+OK:display_completed

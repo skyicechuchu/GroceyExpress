@@ -1,0 +1,66 @@
+1,1
+// make_store,store_name,revenue,managerID,locationx,locationy,password,firstname,lastName,phone
+make_store,koger,0,smnew1,311,1232,2,Abi,Brown,987-100-3001
+make_store,target,0,smnew2,111,12,2,Alice,Smith,987-100-3000
+display_stores
+make_store,koger,0,smnewerror,311,1232,2,Abi,Brown,987-100-3001
+make_store,wholefood,0,smnew2,111,12,2,Alice,Smith,987-100-3000
+logout ??????
+logout
+
+// sell_item,store_name,item,weight
+1,1
+sell_item,koger,pot_roast,1
+logout
+smnew1,2
+sell_item,target,pot_roast,1
+sell_item,koger,pot_roast,1
+sell_item,koger,pot_roast,2
+sell_item,koger,carrot,10
+logout
+smnew2,2
+sell_item,target,milk,4
+logout???
+logout
+
+
+// make_pilot, account, firsname, lastname,phone, tax,license, experience
+smnew1,2
+make_pilot,pnew1,Peter,Anderson,109-121-0211,ABL909,0
+logout
+1,1
+make_pilot,pnew1,Peter,Anderson,109-121-0211,098-290-320,ABL909,0
+make_pilot,pnew2,Sam,Houk,119-121-0211,198-290-320,ABL903,10
+make_pilot,pnew2,Sam1,Houk1,119-121-0211,198-290-320,ABL903,10
+logout
+
+// make_drone, storename, capacity, remaining_cap, delivery_before_fule
+make_drone,target,1,10,5
+make_drone,koger,1,10,5
+make_drone,koger,12,1,1
+
+// fly_drone,storename,droneid,pilot_accout
+fly_drone,target,12,pnew1
+fly_drone,koger,199,pnew1
+fly_drone,koger,1,pnew10
+fly_drone,koger,1,pnew1
+logout
+
+// start_order,storeName,CustomerID
+ct9,28
+start_order,abc,ct9
+start_order,koger,xx
+start_order,koger,ct9
+
+// request_item,storeName,purchaseA,itemName,quanitity,unit price
+request_item,koger,1,pot_roast,3,10
+
+// add_birds
+logout
+1,1
+add_birds,10
+logout
+
+
+ct9,28
+purchase_order,koger,1
